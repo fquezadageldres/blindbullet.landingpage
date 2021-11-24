@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --base-2:#262626;
+  --base-3:#595959;
+  --base-4:#a6a6a6;
+  --base-5:#c6c6c6;
+  --base-6:#f2f2f2;
+  --green-1:#6f918a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color:var(--base-0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+a {text-decoration: none}
+p {font-size:.9em;line-height: 1.7em}
+.small {font-size: .8em}
+br {height: 1em;}
+hr {margin: 0px 0;}
+
+/* Size */
+.w-100 {width: 100%}
+
+.flex { display:flex}
+.block { display:block}
+.none { display:none}
+
+.fixed {position: fixed}
+
+.align-center {align-items: center}
+.align-baseline {align-items: baseline}
+
+/* Font */
+.font-align-left {text-align: left}
+.font-align-center {text-align: center}
+.font-align-justify {text-align: justify}
+
+.bold {font-weight: 600}
+.skinny {padding: 0 50px}
+
+
+/* Header */
+.header {
+    background-color: #f4f4f4;
+    position: fixed;
+    height:130px;
+    overflow:hidden;
+    z-index: 10;
+    -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
+}
+
+.header.scrolled {
+    height:100px;
+    border-bottom: 3px solid var(--green-1);
+    transition: all .3s;
+}
+
+/* Logo */
+.logo {
+    background-image: url("image/logo_100.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin:10px 50%;
+    height: 100px;
+    width: 512px;
+    transform: translateX(-50%);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.header.scrolled .logo {
+    margin:10px 50%;
+    height: 50px;
+    width: 256px;
+    transition: all .3s;
+}
+
+/* Menu */
+.menu {
+    position:fixed;
+    display: inline-block;
+    padding: 20px;
+    top:200px;
+    left: 50%;
+    height: 700px;
+    width: 260px;
+    transform: translateX(-570px);
+    z-index: 100;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: block;
+}
+
+.menu li {
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.menu li a {
+    color:var(--base-3);
+    font-size: 1em;
+}
+
+.menu li:hover {
+    background-color: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
+}
+
+.menu li.active a {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Containers */
+.container {
+    margin-left:50%;
+    width: 1100px;
+    transform: translateX(-50%);
+}
+
+.box {
+    margin-top:200px;
+    margin-left:300px;
+    width: 700px;
+}
+
+.section {
+    background-color: #fff;
+    display: block;
+    margin-bottom:20px;
+    border-radius: 5px;
+    padding: 50px;
+    height: auto;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
+}
+
+.content { 
+    margin:30px 0;
+    margin-left:50%; 
+    width: 700px; 
+    transform: translateX(-50%);
+}
+
+/* Player */
+.player {
+    background-image: url("image/play.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    height: 80px;
+    width: 80px;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.player.active {
+    background-image: url("image/pause.png");
+    animation: beat 1.5s ease-in-out infinite;
+}
+
+.player:hover,
+.player.active:hover {
+    animation: beat 2s ease-in-out infinite;
+}
+
+@keyframes beat {
+    0% { transform: scale(1.1)}
+    30% { transform: scale(1.1)}
+    40% { transform: scale(1)}
+    50% { transform: scale(1.1)}
+    60% { transform: scale(1)}
+    70% { transform: scale(1.1)}
+    100% { transform: scale(1.1)}
+}
+
+.image-700 {
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:5px 0;
+    width: 700px;
+}
+
+/* Home */
+#title-the-game {
+    background-image: url("image/title_the_game.png");
+    height: 70px;
+}
+#home-1 {
+    background-image: url("image/home.png");
+    height: 307px;
+}
+
+/* Crowdfunding */
+#title-crowdfunding {
+    background-image: url("image/title_crowdfunding.png");
+    height: 70px;
+}
+
+/* Tiers */
+#title-tier {
+    background-image: url("image/title_tier.png");
+    height: 35px;
+}
+#tier-image-1 {
+    background-image: url("image/tier.png");
+    height: 577px;
+}
+
+/* Stretch Goals */
+#title-stretch-goal {
+    background-image: url("image/title_stretch_goal.png");
+    height: 35px;
+}
+#stretch-goal-image-1 {
+    background-image: url("image/stretch_goal_1.png");
+    height: 208px;
+}
+#stretch-goal-image-2 {
+    background-image: url("image/stretch_goal_2.png");
+    height: 208px;
+}
+#stretch-goal-image-3 {
+    background-image: url("image/stretch_goal_3.png");
+    height: 208px;
+}
+#stretch-goal-image-4 {
+    background-image: url("image/stretch_goal_4.png");
+    height: 208px;
+}
+
+/* Gameplay */
+#title-gameplay {
+    background-image: url("image/title_gameplay.png");
+    height: 70px;
+}
+
+/* Game Mode */
+#title-game-mode {
+    background-image: url("image/title_game_mode.png");
+    height: 25px;
+}
+#game-mode-1 {
+    background-image: url("image/game_mode.png");
+    height: 188px;
+}
+
+/* Weapons */
+#title-weapon {
+    background-image: url("image/title_weapon.png");
+    height: 25px;
+}
+#weapon-1 {
+    background-image: url("image/weapons.png");
+    margin-top:-200px;
+    margin-left: 100px;
+    height: 227px;
+}
+
+
+/* Maps */
+#title-map {
+    background-image: url("image/title_map.png");
+    height: 25px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1150px) {
+    .container {
+        margin-left:50%;
+        width: 900px;
+        transform: translateX(-50%);
+    }
+    .content { 
+        margin-left:50%; 
+        width: 600px; 
+        transform: translateX(-50%);
+    }
+}

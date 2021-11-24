@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Custom style-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="minigame.css">
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/f17c2749e4.js" crossorigin="anonymous"></script>
+  <!--Libs JS-->
+  <script src="jquery-3.6.0.slim.js"></script>
+  <title>Blindbullet</title>
+</head>
+
+<body>
+
+  
+
+  <!-- HEADER -->
+  <div class="header w-100">
+    <div class="logo"></div>
+  </div>
+
+  <div id="to-home"></div>
+
+  <!-- Left Menu -->
+  <div class="menu">
+    <ul>
+      <li id="item-0" class="item"><a href="#to-home">Inicio</a></li>
+      <br>
+      <hr>
+      <br>
+      <li id="item-1" class="item active"><a href="#to-crowdfunding">Crowdfunding</a></li>
+      <li id="item-2" class="item"><a href="#to-tiers">Recompensas</a></li>
+      <li id="item-3" class="item"><a href="#to-stretch-goals">Metas de recaudación</a></li>
+      <br>
+      <hr>
+      <br>
+      <li id="item-4" class="item"><a href="#to-gameplays">Gameplay</a></li>
+      <li id="item-5" class="item"><a href="#to-game-modes">Modos de juego</a></li>
+      <li id="item-6" class="item"><a href="#to-weapons">Armas</a></li>
+      <li id="item-8" class="item"><a href="#to-maps">Mapas</a></li>
+      <br>
+      <hr>
+      <br>
+      <li id="item-9" class="item"><a href="#to-home">Nosotros</a></li>
+      <li id="item-10" class="item"><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- Body -->
+  <div class="container flex">
+    <div class="box">
+
+    <!-- Home -->
+    <div id="home" class="home section block">
+
+      <div class="content">
+        <div id="title-the-game" class="image-700"></div>
+        <br>
+        <div id="home-1" class="image-700"></div>
+        <br>
+        <p class="font-align-justify">
+          <b class="bold">BLIND BULLET es un audiojuego de disparos completamente 
+          inmersivo,</b> que nace inspirado de los juegos del tipo FPS como Counter-Strike o 
+          Call of Duty, y que busca transportar toda la experiencia y adrenalina de los combates 
+          a un mundo exclusivamente auditivo.
+        </P>
+        <br>
+        <P class="font-align-justify">
+          Por medio de la especialización 3D del sonido en el ambiente y una 
+          gran banda sonora, podrás sentirte parte de las batallas tal como si en 
+          ellas estuvieras. Cada respiro, cada movimiento, cada disparo genera un 
+          sonido que te entregara información sobre tus rivales, lo que hacen y 
+          donde están en tiempo real, lo que con tu habilidad y estrategia 
+          aprovecharas para salir victorioso.
+        </P>
+        <br>
+        <P class="font-align-justify">
+          Ya sea jugando solo en modo historia o con tus amigos
+           en partidas online, el sonido será el único medio con el que te desenvolverás en 
+           este gran y maravilloso mundo repleto de experiencias... <b class="bold">¡solo conecta tus audífonos y a disparar!</b>
+        </P>
+      </div>
+      
+      <div class="minigame"></div>
+      
+      <!-- Minigame -->
+      <div class="target"></div>
+      <div class="wall"></div>
+
+      <div class="content block">
+        <div class="gun"></div>
+        <div class="charge flex"></div>
+      </div>
+
+      <div class="content flex align-center intructions-minigame">
+        <div class="shortkey-minigame"></div>
+        <div class="text block">
+          <h5>Abrir / Cerrar Minijuego</h5>
+          <h5>Cambiar arma</h5>
+          <h5>Recargar minición</h5>
+          <h5>Limpiar pantalla</h5>
+          <h5>Disparar</h5>
+        </div>
+      </div>
+
+      <div id="to-crowdfunding"></div>
+
+    </div>
+
+      <!-- crowdfunding -->
+      <div class="section">
+
+        <div class="content">
+          <div id="title-crowdfunding" class="image-700"></div>
+          <br>
+          <p class="font-align-justify">
+            BLIND BULLET es un proyecto que hace mucho tiempo queremos compartir, buscamos 
+            diversificar el mundo de los audiojuegos ofreciendo la mejor experiencia posible, 
+            pero no podemos hacerlo solos, buscamos colaboradores que nos apoyen en su 
+            financiamiento, así fue como nos decidimos por <b class="bold">INDIEGOGO como plataforma de 
+            CROWDFUNDING.</b>
+          </p>
+          <br>
+          <p class="font-align-justify">
+            <b class="bold">El CROWDFUNDING es una red de financiación colectiva</b> que, a través de donaciones por la compra 
+            de alguno de nuestros packs de recompensas, financiaran este hermoso proyecto.
+          </p>
+          <br>
+          <p class="font-align-justify">
+            Más abajo puedes ver los packs de recompensas y las metas de recaudación,<b class="bold"> entre más logremos 
+            reunir, más contenidos y modos de juegos podremos liberar.</b>
+          </p>
+          <br>
+          <div id="crowdfunding-1" class="image-700"></div>
+
+        </div>
+
+        <div id="to-tiers"></div>
+      </div>
+
+      <!-- tiers -->
+      <div class="section">
+
+        <div class="content">
+          <div id="title-tier" class="image-700"></div>
+          <br>
+          <p class="font-align-justify">
+            Puedes apoyar la creación de <b class="bold">BLIND BULLET</b> adquiriendo 
+            alguno de los <b class="bold">packs de recompensas</b> que tenemos para ti, tales 
+            como armas, características exclusivas, participar en las betas 
+            cerradas o ser parte de un reducido grupo de jugadores llamados LORD OF SILENT que 
+            participan más estrechamente con el equipo de desarrollo, pudiendo incluso crear 
+            objetos del juego o dando vida a un NPC, solo apunta el inicio de la campaña en el 
+            calendario y <b class="bold">con tu contribución se parte de este maravilloso proyecto!!!</b>
+          </p>
+          <br>
+          <div id="tier-image-1" class="image-700"></div>
+
+        </div>
+
+        <div id="to-stretch-goals"></div>
+
+      </div>
+  
+
+      <!-- Stretch goals -->
+      <div class="section">
+
+        <div class="content">
+          <div id="title-stretch-goal" class="image-700"></div>
+          <br>
+          <p class="font-align-justify">
+            <b class="bold">Con 10.000 USD se hará realidad BLIND BULLET,</b> 
+            pero a partir de ahí buscamos expandir este mundo auditivo ofreciendo más 
+            y variadas posibilidades a sus modos de juegos, banda sonora, armas, equipos, mapas y 
+            todo lo necesario para ofrecer una experiencia de juego completa y única.
+          </p>
+          <br>
+          <p class="font-align-justify">
+            <b class="bold">BLIND BULLET</b> nace de la pasión por expandir 
+            el mundo de los audiojuegos y de ofrecer una alternativa variada y entretenida, 
+            sin importar el resultado de la campaña, si logramos el mínimo estaremos 
+            inmensamente agradecidos y contentos por lograr este sueño y poder compartirlo 
+            con todos ustedes.
+          </p>
+          <br>
+          <p class="font-align-justify bold">
+            Gracias por su apoyo!!!
+          </p>
+          <br>
+          <div id="stretch-goal-image-1" class="image-700"></div>
+          <div id="stretch-goal-image-2" class="image-700"></div>
+          <div id="stretch-goal-image-3" class="image-700"></div>
+          <div id="stretch-goal-image-4" class="image-700"></div>
+        </div>
+
+        <div id="to-gameplays"></div>
+      </div>
+
+      <!-- gameplay -->
+      <div class="section">
+
+        <div class="content">
+          <div id="title-gameplay" class="image-700"></div>
+          <div id="gameplay-1" class="image-700"></div>
+          <br>
+          <p class="font-align-justify">
+            La mecánica principal de <b class="bold">BLIND BULLET es oír a tu enemigo y disparar antes de que 
+            él lo haga contigo,</b> para eso deberás cuidar cada uno de tus movimientos y disparos, 
+            todo lo que haces genera algún sonido, usa tu habilidad, armas y entorno como 
+            estrategia para la victoria.
+          </p>
+        </div>
+
+        <div id="to-game-modes"></div>
+      </div>
+
+      <!-- game mode -->
+      <div class="section">
+
+        <div class="content">
+          <div id="title-game-mode" class="image-700"></div>
+          <br>
+          <p class="font-align-justify">
+            BLIND BULLET ofrece <b class="bold">cuatro modos de juego,</b> dos 
+            en modo local, <b class="bold">ENTRENAMIENTO e HISTORIA</b> de un solo jugador y dos online en 
+            modo <b class="bold">COMPETITIVO,</b> estos últimos sujetos a metas de recaudación debido a los 
+            costes asociados a los servidores que se requieren para su funcionamiento.
+          </p>
+          <br>
+          <br>
+          <p class="font-align-justify skinny">
+            En el modo <b class="bold">ENTRENAMIENTO</b> pasaras por una serie de mecánicas que desarrollaran 
+            habilidades especificas del juego, podrás desbloquear mejoras y recompensas y te 
+            otorgaran un rango con el que medirte con tus amigos.
+          </p>
+          <br>
+          <p class="font-align-justify skinny">
+            Para el modo <b class="bold">HISTORIA</b>, serás parte de un equipo elite ultra 
+            secreto de soldados que cumplirán misiones para las cuales nadie más está entrenado, 
+            deberás derrocar gobiernos y hacer desaparecer gente, todo esto sin que nadie se 
+            entere de que paso
+          </p>
+          <p class="font-align-justify skinny">
+            Podrás desbloquear nuevas misiones, armas y mapas, además de mejorar tu rango según 
+            tu puntuación de misión.
+          </p>
+          <br>
+          <p class="font-align-justify skinny">
+            En el modo <b class="bold">COMPETITIVO ONLINE</b> podrán enfrentarse contra otros 
+            jugadores de forma individual o en equipos, con un máximo de 5 jugadores en un 
+            tiempo limitado, con el sistema de clasificatorias online podrán ir escalando en 
+            el ranking de posiciones y coronarse como los mejores soldados de elite.
+          </p>
+          <br>
+          <br>
+          <div id="game-mode-1" class="image-700"></div>
+
+        </div>
+
+        <div id="to-weapons"></div>
+      </div>
+
+      <!-- weapons -->
+      <div class="section">
+
+        <div class="content">
+          <div id="title-weapon" class="image-700"></div>
+          <br>
+          <p class="font-align-justify">
+            <b class="bold">Las ARMAS no solo son para disparar en BLIND BULLET</b>, también definen tu estilo de 
+            juego, así cada arma además de contar con una potencia de fuego o número de 
+            disparos disponibles, <b class="bold">también determinan otros aspectos,</b> como velocidad de 
+            movimiento, resistencia, regeneración de escudo o rango de detección de enemigos…
+          </p>
+          <br>
+          <p class="font-align-justify">
+            Por ejemplo, una escopeta te entregara parámetros relacionados con defensa, la 
+            resistencia a los disparos o regeneración de vida, por otra parte, las armas de 
+            una mano te otorgaran velocidad de movimiento y sigilo, o en el caso de los rifles de francotirador, te otorgaran mayor 
+            precisión y detección de enemigos.
+          </p>
+          <br>
+          <p class="font-align-justify">
+            Así, <b class="bold">cada jugador puede portar dos armas combinando sus atributos y ventajas para 
+            compensar sus falencias,</b> es cosa de encontrar tu propio estilo de juego y disfrutar.
+          </p>
+          <br>
+          <p class="font-align-justify ">
+            Existen un total de 21 armas, divididas en 7 categorías distintas según el tipo de 
+            arma y lo que potencian: 
+          </p>
+          <br>
+          <p class="font-align-justify skinny">
+             PISTOLA <br> REVOLVER <br> SUB-FUSIL <br> FUSIL DE ASALTO <br>
+             ESCOPETA <br> FUSIL DE FRANCOTIRADOR <br> AMETRALLADORA 
+          </p>
+          <div id="weapon-1" class="image-700"></div>
+          <p class="small skinny font-align-center">
+            Puedes acceder al mini juego de esta página presionando shift + a, y hacer unas 
+            cuantas pruebas de disparos con algunos estilos de armas.
+          </p>
+        </div>
+
+        <div id="to-maps"></div>
+      </div>
+
+      <!-- map -->
+      <div class="section">
+
+        <div class="content">
+          <div id="title-map" class="image-700"></div>
+          <br>
+          <p class="font-align-justify">
+            Cada mapa es un entorno de juego distinto, una experiencia distinta y por lo 
+            tanto una estrategia distinta afectando en mayor o menor medida la jugabilidad, 
+            en el <b class="bold">mapa TORMENTA</b> por ejemplo, lucharan en medio de lluvia y truenos, 
+            escucharan cosas volar y romperse dificultando oír a tu enemigo, por el 
+            contrario, en el <b class="bold">mapa TEMPLO,</b> cada paso, cada movimiento genera un eco, que 
+            otorgara información adicional de tu posición…, entre más juegues, mas podrás 
+            identificar tu entorno por sonidos específicos, una gotera, un perro ladrando, 
+            una tele encendida  y una infinidad de ruidos te ayudaran a saber dónde estás y 
+            por dónde ir, son <b class="bold">los mapas y tu destreza para identificar el entorno </b>lo que te 
+            convertirá en un verdadero maestro en el juego.
+          </p>
+          <br>
+          <div id="map-1" class="image-700"></div>
+
+        </div>
+
+        <div id="to-about"></div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!--Custom JS-->
+  <script src="index.js"></script>
+  <script src="minigame.js"></script>
+
+</body>
+
+</html>
