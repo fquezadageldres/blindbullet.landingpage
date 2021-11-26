@@ -72,18 +72,20 @@ $(function () {
     {
         if (run_game) 
         {
-            $("#home .target, #home .wall, #home .gun, #home .charge, #home .intructions-minigame").css({"display":"none"})
-            $("#home .home-text, #home .player, #home .start-minigame").css({"display":"inherit"})
+            $(".header").css({"height":"100px"})
+            $(".header.scrolled").css({"height":"70px"})
+            $(" .target,  .wall,  .gun,  .charge,  .intructions-minigame").css({"display":"none"})
+            $(" .home-text,  .player,  .start-minigame").css({"display":"inherit"})
             $('html').css({"overflow-y": "inherit"})
             run_game = false;
         } 
         else 
         {
-            $("#home .target, #home .wall, #home .gun").css({"display":"inherit"})
-            $("#home .home-text, #home .player, #home .start-minigame").css({"display":"none"})
-            $("#home .charge, #home .intructions-minigame").css({"display":"flex"})
-            $("#home .gun").css({'background-image':'url("image/' + gun[currentGun].name + '.png")'})
-            $('html, body').animate({ scrollTop: $("#home").offset().top}, 50)
+            $(".header").css({"height":"100vh"})
+            $(" .target,  .wall,  .gun").css({"display":"inherit"})
+            $(" .home-text,  .player,  .start-minigame").css({"display":"none"})
+            $(" .charge,  .intructions-minigame").css({"display":"flex"})
+            $(" .gun").css({'background-image':'url("image/' + gun[currentGun].name + '.png")'})
             $('html').css({"overflow-y": "hidden"})
             showBullets()
             run_game = true;
@@ -110,11 +112,11 @@ $(function () {
     /* Update the bullets num and type */
     function showBullets() 
     {
-        $("#home .charge").empty();
+        $(" .charge").empty();
         for (var i = 0; i < (gun[currentGun].charger - bulletShoted); i++) 
         {
-            $("#home .charge").css({'width': gun[currentGun].charger * 20})
-            $("#home .charge").append('<div id="bullet-' + i + '" class="bullet"></div>')
+            $(".charge").css({'width': gun[currentGun].charger * 20})
+            $(".charge").append('<div id="bullet-' + i + '" class="bullet"></div>')
             $("#bullet-" + i ).css({'background-image':'url("image/' + gun[currentGun].name + '_bullet.png")'})
         }
     }
@@ -133,7 +135,7 @@ $(function () {
         {
             for (var i = 0; i < gun[currentGun].numShoot; i++) 
             {
-                $("#home .wall").append('<div id="impact-' + impact + '" class="impact"></div>');
+                $(" .wall").append('<div id="impact-' + impact + '" class="impact"></div>');
                 $("#impact-" + impact ).css({
                     "top":e.offsetY - (gun[currentGun].bulletSize / 2 + getRandomInt(-gun[currentGun].rangeImpac, gun[currentGun].rangeImpac) ) + "px",
                     "left":e.offsetX - (gun[currentGun].bulletSize / 2 + getRandomInt(-gun[currentGun].rangeImpac, gun[currentGun].rangeImpac)) + "px",
@@ -171,7 +173,7 @@ $(function () {
     /* Clear the impact on windows */
     function clearWindow() 
     {
-        $("#home .wall").empty();
+        $(" .wall").empty();
         impact = 0;
     }
 

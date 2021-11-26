@@ -1,11 +1,5 @@
 $(function () 
 {
-    $(document).scroll(function () 
-    {
-        var $nav = $(".header");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    });
-
     $(".logo" ).click(function() 
     {
         $(".menu").find(".active").removeClass("active")

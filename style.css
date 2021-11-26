@@ -23,6 +23,7 @@ html {
 
 body {
     background-color: #f4f4f4;
+    min-width: 850px;
 }
 
 a {text-decoration: none}
@@ -56,15 +57,11 @@ hr {margin: 0px 0;}
 .header {
     background-color: #f4f4f4;
     position: fixed;
-    height:130px;
+    height:100px;
     overflow:hidden;
     z-index: 10;
     -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3); 
     box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
-}
-
-.header.scrolled {
-    height:100px;
     border-bottom: 3px solid var(--green-1);
     transition: all .3s;
 }
@@ -74,61 +71,13 @@ hr {margin: 0px 0;}
     background-image: url("image/logo_100.png");
     background-repeat: no-repeat;
     background-size: contain;
-    margin:10px 50%;
-    height: 100px;
-    width: 512px;
+    margin:10px 50% 0;
+    height: 80px;
+    width: 400px;
     transform: translateX(-50%);
-    transition: all .3s;
     cursor: pointer;
 }
 
-.header.scrolled .logo {
-    margin:10px 50%;
-    height: 50px;
-    width: 256px;
-    transition: all .3s;
-}
-
-/* Menu */
-.menu {
-    position:fixed;
-    display: inline-block;
-    padding: 20px;
-    top:200px;
-    left: 50%;
-    height: 700px;
-    width: 260px;
-    transform: translateX(-570px);
-    z-index: 100;
-}
-
-.menu ul {
-    list-style-type: none;
-    display: block;
-}
-
-.menu li {
-    padding: 4px 8px;
-    cursor: pointer;
-    transition: all .3s;
-}
-
-.menu li a {
-    color:var(--base-3);
-    font-size: 1em;
-}
-
-.menu li:hover {
-    background-color: #fff;
-    border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3); 
-    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.3);
-}
-
-.menu li.active a {
-    font-size: 1.2em;
-    font-weight: 600;
-}
 
 /* Containers */
 .container {
@@ -138,8 +87,8 @@ hr {margin: 0px 0;}
 }
 
 .box {
-    margin-top:200px;
-    margin-left:300px;
+    margin-top:130px;
+    margin-left:150px;
     width: 700px;
 }
 
@@ -161,6 +110,26 @@ hr {margin: 0px 0;}
     width: 700px; 
     transform: translateX(-50%);
 }
+
+
+/* Player */
+.start {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    border:3px solid var(--green-1);
+}
+.start h1 {
+    font-size: 3em;
+    color:#888
+}
+.start h1 span {
+    color:var(--green-1);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
 
 /* Player */
 .player {
@@ -285,16 +254,3 @@ hr {margin: 0px 0;}
 }
 
 
-/* Media Queries */
-@media (max-width: 1150px) {
-    .container {
-        margin-left:50%;
-        width: 900px;
-        transform: translateX(-50%);
-    }
-    .content { 
-        margin-left:50%; 
-        width: 600px; 
-        transform: translateX(-50%);
-    }
-}

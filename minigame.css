@@ -1,15 +1,5 @@
 /* Mini game */
-#home .target {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    opacity: 1;
-    z-index: 100;
-}
-
-#home .wall {
+.wall {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,27 +9,37 @@
     z-index: 50;
 }
 
-#home .gun {
+.target {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+    z-index: 100;
+}
+
+.gun {
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top:30px;
+    margin-top:100px;
     margin-left:calc(50% - 223px);
     height: 100px;
     width: 457px;
 }
 
-#home .impact {
+.impact {
     position: absolute;
     background-image: url("image/impact.png");
     background-size: cover;
 }
 
-#home .charge {
+.charge {
     margin:0 auto;
     height: 72px;
 }
 
-#home .bullet {
+.bullet {
     background-image: url("image/pistol_bullet.png");
     background-repeat: no-repeat;
     background-size: inherit;
@@ -47,7 +47,7 @@
     width: 20px;
 }
 
-#home .start-minigame {
+.start-minigame {
     margin: 20px 50% 0;
     padding: 10px 30px;
     height: 100px;
@@ -55,7 +55,7 @@
     transform: translateX(-50%);
 }
 
-#home .shortkey-startgame {
+.shortkey-startgame {
     background-image: url("image/start_minigame.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -64,17 +64,17 @@
     cursor: pointer;
 }
 
-#home .shortkey-startgame:hover {
+.shortkey-startgame:hover {
     transform: scale(1.2);
     transition: all .3s;
 }
 
 
-#home .start-minigame h4 {
+.start-minigame h4 {
     text-align: center;
 }
 
-#home .intructions-minigame {
+.intructions-minigame {
     margin:20px 50% 0 0;
     border:1px solid var(--decorator-3);
     padding: 10px 30px;
@@ -83,7 +83,7 @@
     transform: translateX(-50%);
 }
 
-#home .shortkey-minigame {
+.shortkey-minigame {
     background-image: url("image/shortkey_minigame.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -91,7 +91,7 @@
     width: 93px;
 }
 
-#home .intructions-minigame h2, 
-#home .intructions-minigame h5 {
+.intructions-minigame h2, 
+.intructions-minigame h5 {
     margin:15px 20px;
 }
