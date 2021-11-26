@@ -120,6 +120,10 @@ hr {margin: 0px 0;}
     padding: 0 50px;
     border:3px solid var(--green-1);
 }
+.start .content {
+    margin:10px 0;
+    margin-left: 50%;
+}
 .start h1 {
     font-size: 3em;
     color:#888
@@ -127,9 +131,8 @@ hr {margin: 0px 0;}
 .start h1 span {
     color:var(--green-1);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
-
 
 /* Player */
 .player {
