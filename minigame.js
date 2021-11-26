@@ -13,7 +13,7 @@ $(function () {
     var gun = [
         {name:"pistol",bulletSize:100,charger:11,cadence:400,timeShoot:1,numShoot:1,rangeImpac:20},
         {name:"fusil",bulletSize:200,charger:15,cadence:400,timeShoot:100,numShoot:3,rangeImpac:40},
-        {name:"shotgun",bulletSize:100,charger:6,cadence:900,timeShoot:1,numShoot:20,rangeImpac:100},
+        {name:"shotGun",bulletSize:100,charger:6,cadence:900,timeShoot:1,numShoot:20,rangeImpac:100},
         {name:"sniper",bulletSize:400,charger:3,cadence:1100,timeShoot:1,numShoot:1,rangeImpac:30}
     ]
 
@@ -104,7 +104,7 @@ $(function () {
     async function reloadGun() 
     {
         delay_reload = true
-        bulletShoted = (gun[currentGun].name == "shotgun") ? bulletShoted -= 1 : 0 ;
+        bulletShoted = (gun[currentGun].name == "shotGun") ? bulletShoted -= 1 : 0 ;
         bulletShoted = (bulletShoted < 0) ? 0 : bulletShoted;
         console.log(bulletShoted)
     }
@@ -144,7 +144,7 @@ $(function () {
                     "transform":"rotate(" + getRandomInt(0, 360)  + "deg)"
                 })
                 
-                if (gun[currentGun].name != "shotgun") 
+                if (gun[currentGun].name != "shotGun") 
                 {
                     updateVarShoot()
                 }
@@ -152,7 +152,7 @@ $(function () {
                 await timer(gun[currentGun].timeShoot);
             }
 
-            if (gun[currentGun].name == "shotgun") 
+            if (gun[currentGun].name == "shotGun") 
             {
                 updateVarShoot()
             }   
