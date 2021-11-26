@@ -13,7 +13,7 @@ $(function () {
     var gun = [
         {name:"pistol",bulletSize:100,charger:11,cadence:400,timeShoot:1,numShoot:1,rangeImpac:20},
         {name:"fusil",bulletSize:200,charger:15,cadence:400,timeShoot:100,numShoot:3,rangeImpac:40},
-        {name:"shotGun",bulletSize:100,charger:6,cadence:900,timeShoot:1,numShoot:20,rangeImpac:100},
+        {name:"shotgun",bulletSize:100,charger:6,cadence:900,timeShoot:1,numShoot:20,rangeImpac:100},
         {name:"sniper",bulletSize:400,charger:3,cadence:1100,timeShoot:1,numShoot:1,rangeImpac:30}
     ]
 
@@ -33,13 +33,13 @@ $(function () {
             {
                 switchWeapon()
                 showBullets()
-                audioPlay(gun[currentGun].name + "Reload")
+                audioPlay(gun[currentGun].name + "_Reload")
             } 
             else if (e.key === "e" || e.key === "E") 
             {
                 reloadGun()
                 showBullets()
-                audioPlay(gun[currentGun].name + "Reload")
+                audioPlay(gun[currentGun].name + "_Reload")
             } 
             else if (e.key === "r" || e.key === "R") 
             {
@@ -74,18 +74,18 @@ $(function () {
         {
             $(".header").css({"height":"100px"})
             $(".header.scrolled").css({"height":"70px"})
-            $(" .target,  .wall,  .gun,  .charge,  .intructions-minigame").css({"display":"none"})
-            $(" .home-text,  .player,  .start-minigame").css({"display":"inherit"})
+            $(".target, .wall,  .gun, .charge, .intructions-minigame").css({"display":"none"})
+            $(".home-text, .player, .start-minigame").css({"display":"inherit"})
             $('html').css({"overflow-y": "inherit"})
             run_game = false;
         } 
         else 
         {
             $(".header").css({"height":"100vh"})
-            $(" .target,  .wall,  .gun").css({"display":"inherit"})
-            $(" .home-text,  .player,  .start-minigame").css({"display":"none"})
-            $(" .charge,  .intructions-minigame").css({"display":"flex"})
-            $(" .gun").css({'background-image':'url("image/' + gun[currentGun].name + '.png")'})
+            $(".target, .wall, .gun").css({"display":"inherit"})
+            $(".home-text, .player, .start-minigame").css({"display":"none"})
+            $(".charge, .intructions-minigame").css({"display":"flex"})
+            $(".gun").css({'background-image':'url("image/' + gun[currentGun].name + '.png")'})
             $('html').css({"overflow-y": "hidden"})
             showBullets()
             run_game = true;
@@ -104,7 +104,7 @@ $(function () {
     async function reloadGun() 
     {
         delay_reload = true
-        bulletShoted = (gun[currentGun].name == "shotGun") ? bulletShoted -= 1 : 0 ;
+        bulletShoted = (gun[currentGun].name == "shotgun") ? bulletShoted -= 1 : 0 ;
         bulletShoted = (bulletShoted < 0) ? 0 : bulletShoted;
         console.log(bulletShoted)
     }
@@ -113,7 +113,7 @@ $(function () {
     function showBullets() 
     {
         $(" .charge").empty();
-        for (var i = 0; i < (gun[currentGun].charger - bulletShoted); i++) 
+        for (let i = 0; i < (gun[currentGun].charger - bulletShoted); i++) 
         {
             $(".charge").css({'width': gun[currentGun].charger * 20})
             $(".charge").append('<div id="bullet-' + i + '" class="bullet"></div>')
@@ -144,7 +144,7 @@ $(function () {
                     "transform":"rotate(" + getRandomInt(0, 360)  + "deg)"
                 })
                 
-                if (gun[currentGun].name != "shotGun") 
+                if (gun[currentGun].name != "shotgun") 
                 {
                     updateVarShoot()
                 }
@@ -152,7 +152,7 @@ $(function () {
                 await timer(gun[currentGun].timeShoot);
             }
 
-            if (gun[currentGun].name == "shotGun") 
+            if (gun[currentGun].name == "shotgun") 
             {
                 updateVarShoot()
             }   
@@ -165,7 +165,7 @@ $(function () {
 
     /* Update bullet shoot */
     function updateVarShoot() {
-        audioPlay(gun[currentGun].name + "Shot")
+        audioPlay(gun[currentGun].name + "_Shot")
         bulletShoted += 1
         showBullets()
     }
